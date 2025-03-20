@@ -6,6 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <BaseOutputPath>bin\Debug\net8.0-windows\</BaseOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
