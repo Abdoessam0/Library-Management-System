@@ -1,157 +1,144 @@
-README.txt
-----------
+# 📚 Library Management System
 
-Library Management System
+## 🎥 Video Demonstration
 
-***** Video Demonstration *****
+To see the system in action:
 
-To understand how to set up and use the system, you can watch one of the following videos:
+- **YouTube:**  
+  https://youtu.be/hehpJhh1Btg
 
-                      (((  both are the same but diffrent places   )))
+- **Google Drive:**  
+  https://drive.google.com/file/d/12yA8NuQFsHbvKFp88OGppxZlCjaNppeH/view
 
-1. YouTube Link: https://youtu.be/hehpJhh1Btg  
-2. Google Drive Link: https://drive.google.com/file/d/12yA8NuQFsHbvKFp88OGppxZlCjaNppeH/view?usp=sharing
+---
 
-----------
+# 🖼️ Project Screenshots
 
-Project Overview
+### Dashboard  
+![Dashboard](https://github.com/user-attachments/assets/ea42942a-58d4-4f0b-96a3-7d6c15c6b45a)
 
-The Library Management System is a desktop application designed to manage books, students, and borrowing/returning processes. The project uses C# for the application interface and Microsoft SQL Server for the database.
+### Issued & Returned Books  
+![Issued Returned](https://github.com/user-attachments/assets/9dabbdb6-e831-4e83-87d7-c1445f382ae3)
 
-----------
+### Add Book  
+![Add Book](https://github.com/user-attachments/assets/fab44502-161a-421a-8baf-5675b37e2cc2)
 
-Contents
+### Add Student  
+![Add Student](https://github.com/user-attachments/assets/9567d943-6e6c-4dd7-8295-d98bdca627bd)
 
-1. Included Files:
-   - LibraryAutomation.bak: A backup file of the database.
-   - LibraryAutomation.sql: A script to create and initialize the database.
-   - Abdelrahman_mohamed_200709050.sln: The Visual Studio solution file.
-   - ER Diagram.png: A visual representation of the database structure.
-   - Folder Abdelrahman_mohamed_200709050: Contains additional resources.
-   - Folder Query folders: Includes stored procedures, triggers, and functions.
-   - Folder projects images windows: Contains screenshots of application pages.
-   - This file README.txt.
+### View Students  
+![View Students](https://github.com/user-attachments/assets/9d901efd-63f4-4e17-be1e-055755525d8a)
 
-2. Key Features:
-   - 5 Stored Procedures: Adding, updating, and deleting book and member records, as well as viewing available books.
-   - 3 Triggers:
-     - Ensure positive quantities of books.
-     - Update book status upon borrowing.
-     - Prevent deleting members with active borrowings.
-   - 1 View: BorrowedBooksView to display borrowed book details along with member information.
-   - 3 Functions:
-     - Calculate total books.
-     - Count active members.
-     - Calculate penalties for overdue returns.
+### View Books  
+![View Books](https://github.com/user-attachments/assets/cc3d4252-672b-4f76-bd6e-9fecf30be903)
 
-----------
+### Return Books  
+![Return Books](https://github.com/user-attachments/assets/5629ecd7-4b2c-4628-af8f-b3ed694d12ba)
 
-How to Set Up and Run the Project
+### Issue Books  
+![Issue Books](https://github.com/user-attachments/assets/6cd9fb8b-8974-4a69-987b-7abab9a46f08)
 
-1. Extract the Files:
-   - Extract the .zip file to a folder on your local machine.
+---
 
-2. Setting Up the Database:
-   Option A: Restore Database from Backup
-   - Open SQL Server Management Studio (SSMS).
-   - Connect to your SQL Server instance.
-   - Right-click on Databases → Restore Database.
-   - Select Device and locate the file LibraryAutomation.bak.
-   - Ensure the database is named LibraryAutomation.
-   - Click OK to restore the database.
+# 📌 Project Overview
 
-   Option B: Use SQL Script
-   - Open SQL Server Management Studio (SSMS).
-   - Connect to your SQL Server instance.
-   - Open the LibraryAutomation.sql file.
-   - Execute the script to create and populate the database.
-   - Ensure the database name matches LibraryAutomation.
+A complete **Library Management System** developed using:
 
-3. Configuring the Project:
-   - Open the Project in Visual Studio:
-     - Open Visual Studio.
-     - Go to File → Open → Project/Solution.
-     - Navigate to the project folder and open Abdelrahman_mohamed_200709050.sln.
+- **C# Windows Forms**
+- **SQL Server**
+- **T-SQL Stored Procedures & Triggers**
 
-   - Update the Connection String:
-     - Locate the connection string in the code 
+The system allows you to:
 
-     - Update it with your SQL Server instance name:
-       string connectionString = "Data Source=YOUR_SERVER_NAME;Initial Catalog=LibraryAutomation;Integrated Security=True;Encrypt=False";
+- Manage books  
+- Manage students  
+- Issue & return books  
+- Track all transactions  
+- View combined issued/returned reports  
 
-     - Replace YOUR_SERVER_NAME with your SQL Server instance (e.g., DESKTOP-12345\SQLEXPRESS).
+---
 
-4. Running the Application:
-   - Build the Project:
-     - In Visual Studio, go to Build > Build Solution 
+# 📦 Included Files
 
-   - Run the Project:
-     - click Start to launch the application.
+- `LibraryAutomation.bak` – Database backup  
+- `LibraryAutomation.sql` – Script to create the database  
+- `Abdelrahman_mohamed_200709050.sln` – Visual Studio Solution  
+- `ER Diagram.png` – Database diagram  
+- `Query folders` – Stored Procedures, Triggers, Functions  
+- `projects images windows` – Screenshots  
+- `README.txt`  
 
-   - Login Credentials:
-     - Username: admin
-     - Password: admin
+---
 
-----------
+# 🗄️ SQL Backend Details
 
-Application Walkthrough
+### Database
+- **Name:** `LibraryAutomation`  
+- **Engine:** Microsoft SQL Server  
+- **Logic:** Stored procedures, triggers, functions, and views  
 
-Login Page:
-- Enter the username and password to log in.
-- Redirects to the dashboard upon successful login.
+---
 
-Dashboard:
-- Provides options to:
-  - Manage Books (Add, Update, View, Delete)
-  - Manage Students (Add, Update, View, Delete)
-  - Issue Books
-  - Return Books
-  - View Reports (Issued and Returned Books)
+## 🔧 Stored Procedures (5)
 
-Add Book Page:
-- Allows users to add new books with details like name, author, publication, price, and quantity.
+- Add or update books  
+- Add or update students  
+- Delete books  
+- Delete students  
+- View available books  
 
-View Books Page:
-- Displays all books and enables updating prices/quantities or deleting records.
+---
 
-Add Student Page:
-- Adds students with details like name, number, department, and contact.
+## ⚠️ Triggers (3)
 
-View Students Page:
-- Displays student information and allows updates or deletions.
+- Prevent negative book quantities  
+- Update book status when issued or returned  
+- Block deleting a student with active borrowed books  
 
-Issue Books Page:
-- Issues books to students with limits on borrowing (max 3 books).
+---
 
-Return Books Page:
-- Tracks and updates returned books.
+## 👁️ Database View (1)
 
-Compelete the books page:
- - Show the issue books and Return books transaction 
+- **BorrowedBooksView**  
+  Shows issued + returned book details with student names.
 
-----------
+---
 
-Troubleshooting
+## 🧮 Functions (3)
 
-1. Database Connection Issues:
-   - Verify SQL Server is running and accessible.
-   - Check the database name and server instance in the connection string.
+- Calculate total number of books  
+- Count active members  
+- Calculate overdue penalties  
 
-2. Missing Tables or Data:
-   - Re-run the LibraryAutomation.sql script or restore the LibraryAutomation.bak file.
+---
 
-3. Build Errors:
-   - Ensure all dependencies are installed in Visual Studio.
-   - Check your .NET Framework version.
+# 🚀 Setup & Installation
 
-----------
+## 1️⃣ Extract Files
+Unzip the project to any folder.
 
-Contact Information
+---
 
-- Name: Abdelrahman Mohamed  
-- Email: abdoessammo@gmail.com  
-- Phone: +905527508202  
+## 2️⃣ Create the Database
 
-----------
+### Option A — Restore `.bak`
 
-This concludes the **ReadMe** file for the Library Management System. Follow the steps carefully, and feel free to contact me if you encounter any issues. Thank you!
+1. Open **SQL Server Management Studio (SSMS)**  
+2. Right-click **Databases → Restore Database**  
+3. Select file: `LibraryAutomation.bak`  
+4. Restore as **LibraryAutomation**
+
+---
+
+### Option B — Run SQL Script
+
+1. Open **LibraryAutomation.sql** in SSMS  
+2. Execute  
+3. Confirm database name is **LibraryAutomation**
+
+---
+
+## 3️⃣ Configure Visual Studio
+
+Open:
+
